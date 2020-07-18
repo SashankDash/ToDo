@@ -33,12 +33,14 @@
           </form>
         </div>
       </nav>
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> Form submitted: {{sucess}}.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+      {% if sucess %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy Sucess!</strong> Task Submitted!.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+      {% endif %}
 
       <div class="container my3">
           <h2>Welcome to ToDo .. Add Tasks</h2>
