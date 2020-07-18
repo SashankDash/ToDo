@@ -16,4 +16,7 @@ def home (request):
     return render(request,'todo_app/index.html',context)
 
 def task (request):
-    return render(request,'todo_app/task.html')
+
+    allTasks = Task.objects.all()
+    context = {'tasks':allTasks}
+    return render(request,'todo_app/task.html',context)

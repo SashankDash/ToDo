@@ -33,36 +33,33 @@
           </form>
         </div>
       </nav>
-      <div class="container my3">
-          <h2>Here are your list of Tasks</h2>
+      <div class="container my3" py-3>
+          <h2>ToDo!! list of Tasks</h2>
           <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">TaskTitle</th>
+      <th scope="col">TaskDescription</th>
+      <th scope="col">Time</th>
+    
+      
     </tr>
   </thead>
   <tbody>
+
+  {% for task in tasks  %}
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{task.taskTitle}}</td>
+      <td>{{task.taskDesc}}</td>
+      <td>{{task.time}}</td>
+    
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+  {% endfor %}
+    
+      
+    >
   </tbody>
 </table>
         </div>
